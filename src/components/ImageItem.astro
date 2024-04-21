@@ -1,0 +1,59 @@
+---
+const { imgUrl, rawHTMLString } = Astro.props
+---
+<div class="item item-a">
+       <h1 set:html={rawHTMLString}></h1>
+</div>
+
+  <style define:vars={{imgUrl}}>
+     * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .item {
+border: 1px solid #333;
+height: auto;
+width: 100vw;
+text-align: center;
+color:#fff;
+display: flex;
+flex-direction: column;
+align-items: center;
+background: hsl(60, 60%, 61%);
+background-image: var(--imgUrl);
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+
+        }
+        /* fade ind på alle andre bokse end den første */
+        .item:not(:first-of-type){
+          opacity: 0.4;  
+            transition: opacity 2s; 
+          
+        }
+
+        /* klasse der ændre opacity på scroll  */
+       .item.fade-in{
+                opacity: 1;
+        }
+
+        :global(p){
+                font-size:3rem;
+                width:90vw;
+                max-width: 800px;
+                margin: 4rem 0; 
+        }
+
+
+        
+
+
+        @media screen and (min-width:768px) {
+
+
+        }
+
+    </style>

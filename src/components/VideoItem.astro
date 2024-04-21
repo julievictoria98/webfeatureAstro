@@ -1,0 +1,75 @@
+---
+const {videoUrl, rawHTMLString} = Astro.props
+---
+
+ <div class="item item-d">
+                <video id="background-video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+                        <source src={videoUrl} type="video/mp4">
+                </video>
+                <div id="video-tekst">
+                    <h1 set:html={rawHTMLString}></h1>
+
+                </div>
+</div>
+
+  <style>
+     * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .item {
+border: 1px solid #333;
+height: auto;
+width: 100vw;
+text-align: center;
+color:#fff;
+display: flex;
+flex-direction: column;
+align-items: center;
+        }
+        .item:not(:first-of-type){
+          opacity: 0.4; 
+          transition: opacity 2s;     
+        }
+
+        p{font-size:3rem;
+                width:90vw;
+                max-width: 800px;
+                padding: 4rem 0; 
+        }
+
+        .item-d {
+background: hsl(60, 60%, 30%);
+/* display grid, så tekst kan blive placeret oven på video */
+ display:grid;
+           justify-items: center;
+           align-items: start;
+           position:relative;
+
+        }
+   /* video background */
+       #background-video {
+           grid-area: 1 /1;
+           height: 100vh;
+           width: 100%;
+           object-fit: cover;
+       }
+       /* video overlay */
+       #video-tekst{
+           grid-area: 1 / 1;
+           opacity: .8; 
+           place-self:center;
+       } 
+
+       .item.fade-in{
+                opacity: 1;
+        }
+
+
+        @media screen and (min-width:768px) {
+  p{font-size:4rem;}
+
+        }
+
+    </style>

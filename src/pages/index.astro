@@ -1,16 +1,29 @@
 ---
-
+import WebFeatureLayout from "../layout/WebFeatureLayout.astro"
+import ImageItem from "../components/ImageItem.astro"
+import VideoItem from "../components/VideoItem.astro"
 ---
+<WebFeatureLayout>
+    <ImageItem 
+    imgUrl = "url(img-1.jpg)"
+    rawHTMLString = "<p>Bacon ipsum dolor amet porchetta fatback tail, leberkas jerky hamburger pork belly.</p><p>Chuck t-bone drumstick boudin cow jerky kielbasa frankfurter pig salami sausage ham.</p>  <p>Short ribs ground round beef swine tri-tip cupim shank picanha biltong bresaola shoulder fatback tail pork loin. Kielbasa prosciutto cupim sirloin pancetta.</p><p> Pork chop beef ribs frankfurter chicken spare ribs, drumstick biltong short loin porchetta pastrami tri-tip flank.</p>"
+    />
+     <ImageItem 
+     imgUrl = "url(img-2.jpg)"
+         rawHTMLString = "<p>Hejhejehje tester 2 wuhuu whuuu whhuu whuu whhu <br> whuu <br> wuhuuu wuhuu whuuu whhuu whuu whhu <br> whuu <br> wuhuuu. wuhuu whuuu whhuu whuu whhu <br> whuu <br> wuhuuu wuhuu whuuu whhuu whuu whhu <br> whuu <br> wuhuuu</p>"/>
+     
+           <ImageItem 
+    imgUrl = "url(img-3.jpg)"
+    rawHTMLString = "<p>Bacon ipsum dolor amet porchetta fatback tail, leberkas jerky hamburger pork belly.</p><p>Chuck t-bone drumstick boudin cow jerky kielbasa frankfurter pig salami sausage ham.</p>  <p>Short ribs ground round beef swine tri-tip cupim shank picanha biltong bresaola shoulder fatback tail pork loin. Kielbasa prosciutto cupim sirloin pancetta.</p><p> Pork chop beef ribs frankfurter chicken spare ribs, drumstick biltong short loin porchetta pastrami tri-tip flank.</p>"
+    />
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+         <ImageItem 
+    imgUrl = ""
+    rawHTMLString = "<p FJEREDE>Bacon ipsum dolor amet porchetta fatback tail, leberkas jerky hamburger pork belly.</p><p>Chuck t-bone drumstick boudin cow jerky kielbasa frankfurter pig salami sausage ham.</p>  <p>Short ribs ground round beef swine tri-tip cupim shank picanha biltong bresaola shoulder fatback tail pork loin. Kielbasa prosciutto cupim sirloin pancetta.</p><p> Pork chop beef ribs frankfurter chicken spare ribs, drumstick biltong short loin porchetta pastrami tri-tip flank.</p>"
+    />
+<VideoItem 
+videoUrl = "https://assets.codepen.io/6093409/river.mp4"
+rawHTMLString = "Hejsaaa"
+/>
+
+</WebFeatureLayout>
